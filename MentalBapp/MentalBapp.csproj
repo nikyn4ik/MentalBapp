@@ -63,15 +63,17 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Folder Include="AddEdit\" />
-	</ItemGroup>
-
-	<ItemGroup>
 	  <ProjectReference Include="..\DataBase\DataBase.csproj" />
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Update="AddEdit\Registration.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Windows\Login.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Windows\Menu.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>
