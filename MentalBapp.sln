@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.34928.147
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataBase", "DataBase\DataBase.csproj", "{501583D0-C35F-4195-91D3-F9B3FC711302}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MentalBapp", "MentalBapp\MentalBapp.csproj", "{262ED6DB-C635-4E53-A89E-9C5C431F832B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{501583D0-C35F-4195-91D3-F9B3FC711302}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{501583D0-C35F-4195-91D3-F9B3FC711302}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{501583D0-C35F-4195-91D3-F9B3FC711302}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{501583D0-C35F-4195-91D3-F9B3FC711302}.Release|Any CPU.Build.0 = Release|Any CPU
+		{262ED6DB-C635-4E53-A89E-9C5C431F832B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{262ED6DB-C635-4E53-A89E-9C5C431F832B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{262ED6DB-C635-4E53-A89E-9C5C431F832B}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{262ED6DB-C635-4E53-A89E-9C5C431F832B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{262ED6DB-C635-4E53-A89E-9C5C431F832B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{262ED6DB-C635-4E53-A89E-9C5C431F832B}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F361EF5B-B8DB-445B-982F-415AF6A88F8B}
+	EndGlobalSection
+EndGlobal

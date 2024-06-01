@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="MentalBapp.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:MentalBapp"
+    Shell.FlyoutBehavior="Disabled"
+    Title="MentalBapp">
+
+    <ShellContent
+        Title="Home"
+        ContentTemplate="{DataTemplate local:Windows.Login}"
+        Route="Login" />
+
+</Shell>
