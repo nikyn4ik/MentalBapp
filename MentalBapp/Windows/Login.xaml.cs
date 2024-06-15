@@ -1,5 +1,6 @@
-using Microsoft.Maui.Controls;
 using MentalBapp.AddEdit;
+using DataBase.Models;
+using DataBase;
 
 namespace MentalBapp.Windows
 {
@@ -12,16 +13,16 @@ namespace MentalBapp.Windows
 
         private async void LoginB(object sender, EventArgs e)
         {
-            string email = EmailEntry.Text;
+            string name = Name.Text;
             string password = PasswordEntry.Text;
 
-            if (string.IsNullOrWhiteSpace(email) || string.IsNullOrWhiteSpace(password))
+            if (string.IsNullOrWhiteSpace(name) || string.IsNullOrWhiteSpace(password))
             {
-                await DisplayAlert("Error", "Please enter email and password", "OK");
+                await DisplayAlert("Error", "Please enter login and password", "OK");
                 return;
             }
 
-            bool isAuthenticated = await AuthenticateUserAsync(email, password);
+            bool isAuthenticated = await AuthenticateUserAsync(name, password);
 
             if (isAuthenticated)
             {
@@ -29,19 +30,28 @@ namespace MentalBapp.Windows
             }
             else
             {
-                await DisplayAlert("Error", "Invalid email or password", "OK");
+                await DisplayAlert("Error", "Invalid login or password", "OK");
             }
         }
+
         private async void RegisterB(object sender, EventArgs e)
         {
             await Navigation.PopAsync();
-
             await Navigation.PushAsync(new Registration());
         }
 
-        private async Task<bool> AuthenticateUserAsync(string email, string password)
+        private async Task<bool> AuthenticateUserAsync(string name, string password)
         {
-            return !string.IsNullOrWhiteSpace(email) && !string.IsNullOrWhiteSpace(password);
+            using (var db = new ApplicationContext())
+            {
+                var user = db.Users.FirstOrDefault(u => u.Name == name);
+                if (user == null)
+                {
+                    return false;
+                }
+
+                return User.VerifyPass(password, user.Salt, user.PasswordHash);
+            }
         }
     }
 }

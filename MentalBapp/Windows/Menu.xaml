@@ -3,10 +3,22 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MentalBapp.Windows.Menu"
              Title="Menu">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+    <StackLayout>
+        <Label Text="Menu" 
+               FontSize="24" 
+               FontAttributes="Bold"
+               HorizontalOptions="Center" 
+               Margin="10"/>
+        <ListView x:Name="MenuItemsListView" 
+                  ItemSelected="OnMenuItemSelected">
+            <ListView.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>Home</x:String>
+                    <x:String>Profile</x:String>
+                    <x:String>Settings</x:String>
+                    <x:String>Help</x:String>
+                </x:Array>
+            </ListView.ItemsSource>
+        </ListView>
+    </StackLayout>
 </ContentPage>

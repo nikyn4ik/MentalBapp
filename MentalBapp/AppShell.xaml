@@ -8,7 +8,6 @@
     Title="MentalBapp">
 
     <ShellContent
-        Title="Home"
         ContentTemplate="{DataTemplate local:Windows.Login}"
         Route="Login" />
 
